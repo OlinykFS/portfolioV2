@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+   .active .nav-indicator {
+      @apply w-16 bg-slate-200;
+   }
+
+   .active .nav-text {
+      @apply text-slate-200;
+   }
+}
