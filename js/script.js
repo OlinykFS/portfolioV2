@@ -7,34 +7,27 @@ document.addEventListener("mousemove", (e) => {
   gradientElement.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
 });
 const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll("nav a");
+const navLi = document.querySelectorAll("nav ul li");
 
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.top <=
-      (window.innerHeight || document.documentElement.clientHeight) * 0.5
-  );
-}
-
-function updateActiveLink() {
-  let currentSectionId = "";
+function updateActiveNav() {
+  let current = "";
 
   sections.forEach((section) => {
-    if (isElementInViewport(section)) {
-      currentSectionId = section.id;
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
     }
   });
 
-  navItems.forEach((item) => {
-    item.classList.remove("active");
-    if (item.getAttribute("href") === `#${currentSectionId}`) {
-      item.classList.add("active");
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.querySelector("a").getAttribute("href").includes(current)) {
+      li.classList.add("active");
     }
   });
 }
 
-window.addEventListener("scroll", updateActiveLink);
-window.addEventListener("resize", updateActiveLink);
-document.addEventListener("DOMContentLoaded", updateActiveLink);
+window.addEventListener("load", updateActiveNav);
+
+window.addEventListener("scroll", updateActiveNav);
