@@ -792,6 +792,10 @@ body {
   scroll-margin-top: 4rem;
 }
 
+.scroll-mt-80 {
+  scroll-margin-top: 20rem;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -919,10 +923,6 @@ body {
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
 }
 
 .leading-normal {

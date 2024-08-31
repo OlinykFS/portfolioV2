@@ -6,28 +6,49 @@ document.addEventListener("mousemove", (e) => {
 
   gradientElement.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
 });
-const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("nav ul li");
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(
+  "#link-about, #link-experience, #link-projects"
+);
 
-function updateActiveNav() {
-  let current = "";
+function getCurrentSection() {
+  const windowHeight = window.innerHeight;
+  const windowMidpoint = window.scrollY + windowHeight / 4;
 
+  let currentSection = "";
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
-      current = section.getAttribute("id");
+    const sectionHeight = section.offsetHeight;
+    const sectionMidpoint = sectionTop + sectionHeight / 2;
+
+    if (Math.abs(windowMidpoint - sectionMidpoint) < windowHeight / 3) {
+      currentSection = section.getAttribute("id");
     }
   });
-
-  navLi.forEach((li) => {
-    li.classList.remove("active");
-    if (li.querySelector("a").getAttribute("href").includes(current)) {
-      li.classList.add("active");
+  return currentSection;
+}
+function updateActiveNavItem() {
+  const currentSection = getCurrentSection();
+  navLinks.forEach((link) => {
+    const linkId = link.getAttribute("id").replace("link-", "");
+    if (linkId === currentSection) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
     }
   });
 }
 
-window.addEventListener("load", updateActiveNav);
+let ticking = false;
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      updateActiveNavItem();
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
 
-window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("load", updateActiveNavItem);
+window.addEventListener("resize", updateActiveNavItem);
