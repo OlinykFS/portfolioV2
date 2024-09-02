@@ -12,11 +12,12 @@ module.exports = {
       addBase({
         "@font-face": {
           fontFamily: "Inter var",
-          fontWeight: "300 700",
+          fontWeight: "400 700",
           fontStyle: "normal",
-          src: 'url("/src/fonts/InterVariable.woff2") format("woff2")',
+          fontDisplay: "swap",
+          src: 'url("../fonts/InterVariable.woff2") format("woff2")',
         },
-        body: { fontFeatureSettings: '"cv02", "cv03", "cv04", "cv11"' },
+        body: { fontFeatureSettings: '"cv11"' },
       });
     },
   ],

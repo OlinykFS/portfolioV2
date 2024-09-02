@@ -449,15 +449,17 @@ video {
 @font-face {
   font-family: Inter var;
 
-  font-weight: 300 700;
+  font-weight: 400 700;
 
   font-style: normal;
 
-  src: url("/src/fonts/InterVariable.woff2") format("woff2");
+  font-display: swap;
+
+  src: url("../fonts/InterVariable.woff2") format("woff2");
 }
 
 body {
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-feature-settings: "cv11";
 }
 
 *, ::before, ::after {

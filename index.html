@@ -4,32 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Oleh Oliinyk is a full-stack developer who turning your ideas into functional solutions.">
+  <meta name="description"
+    content="Oleh Oliinyk is a full-stack developer who turns your ideas into functional solutions.">
   <meta name="image" content="src/img/meta/image.png">
   <meta property="og:site_name" content="Oleh Oliinyk">
-  <meta property="og:description" content="Oleh Oliinyk is a full-stack developer who turning your ideas into functional solutions.">
+  <meta property="og:description"
+    content="Oleh Oliinyk is a full-stack developer who turns your ideas into functional solutions.">
   <meta property="og:image" content="src/img/meta/image.png">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://github.com/OlinykFS">
   <meta property="og:type" content="website">
-  <link rel="preload" as="font" href="/src/fonts/InterVariable.woff2" type="font/woff2" crossorigin="anonymous">
 
+  <!-- Preload fonts with correct paths -->
+  <link rel="preload" href="src/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <!-- Use preload for CSS only if it improves LCP -->
   <link rel="preload" href="src/css/output.css" as="style">
   <link rel="stylesheet" href="src/css/output.css">
+
   <title>PortfolioV2</title>
 </head>
+
 
 <body
   class="bg-bg-body  font-sans leading-relaxed text-base text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
   <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
 
-    <!-- Gradient Background -->
     <div id="gradient-container" class="fixed inset-0 pointer-events-none z-30">
       <div id="gradient" class="w-full h-full transition-all duration-300 ease-in-out"
         style="background:radial-gradient(600px circle at 0px 0px, rgba(29, 78, 216, 0.15), transparent 100%)"></div>
     </div>
     <div class="lg:flex lg:justify-between lg:gap-4">
-      <!-- Header Section -->
       <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
         <div>
           <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
@@ -39,7 +44,6 @@
           <p class="mt-4 max-w-xs leading-normal">I create websites and turning your ideas into functional solutions.
           </p>
 
-          <!-- Navigation -->
           <nav class="nav hidden lg:block">
             <ul class="mt-16 w-max">
               <li>
@@ -72,17 +76,15 @@
         </div>
       </header>
 
-      <!-- Main Content Section -->
       <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
 
-        <!-- About Section -->
         <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
           <div
             class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
             <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">About</h2>
           </div>
           <div>
-            <p  class="mb-4 text-lg">
+            <p class="mb-4 text-lg">
               I’m a full-stack developer experienced in building both client and server sides of web applications. My
               portfolio includes projects where I have worked on both frontend and backend development and integration.
             </p>
@@ -93,13 +95,13 @@
             </p>
             <p class="text-lg">
               Outside of work, I focus on advancing my knowledge with ongoing
-              studies, keeping up with new technologies, and working on personal <span class="active-text">projects</span> . These activities help me stay
+              studies, keeping up with new technologies, and working on personal <span
+                class="active-text">projects</span> . These activities help me stay
               sharp and continue progressing
             </p>
           </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="mb-16 scroll-mt-80 md:mb-24 lg:mb-36 lg:scroll-mt-24">
           <div
             class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
