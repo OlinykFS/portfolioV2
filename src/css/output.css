@@ -46,7 +46,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Inter var;
+  font-family: "Inter var", system-ui, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -451,14 +451,12 @@ video {
 
   font-weight: 300 700;
 
-  font-display: swap;
-
   font-style: normal;
 
   src: url("/src/fonts/InterVariable.woff2") format("woff2");
 }
 
-html {
+body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
@@ -579,6 +577,22 @@ html {
 .active .nav-text {
   --tw-text-opacity: 1;
   color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
+.active-text {
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active-text:hover {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
 .pointer-events-none {
@@ -730,16 +744,6 @@ html {
   height: 1px;
 }
 
-.h-max {
-  height: -moz-max-content;
-  height: max-content;
-}
-
-.max-h-max {
-  max-height: -moz-max-content;
-  max-height: max-content;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -875,7 +879,7 @@ html {
 }
 
 .font-sans {
-  font-family: Inter var;
+  font-family: "Inter var", system-ui, sans-serif;
 }
 
 .text-4xl {

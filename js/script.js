@@ -39,4 +39,5 @@ function updateActiveNavItem() {
   });
 }
 window.addEventListener("load", updateActiveNavItem);
+window.addEventListener("scroll", updateActiveNavItem);
 window.addEventListener("resize", updateActiveNavItem);

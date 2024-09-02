@@ -10,4 +10,7 @@
    .active .nav-text {
       @apply text-slate-200;
    }
+   .active-text {
+      @apply text-white cursor-pointer hover:text-green-400 transition duration-100 ease-in-out;
+   }
 }
