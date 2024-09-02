@@ -9,13 +9,13 @@
 </head>
 
 <body
-  class="bg-bg-body font-sans leading-relaxed text-base text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+  class="bg-bg-body leading-relaxed text-base text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
   <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
 
     <!-- Gradient Background -->
     <div id="gradient-container" class="fixed inset-0 pointer-events-none z-30">
       <div id="gradient" class="w-full h-full transition-all duration-300 ease-in-out"
-        style="background:radial-gradient(600px circle at 0px 0px, rgba(29, 78, 216, 0.15), transparent 80%)"></div>
+        style="background:radial-gradient(600px circle at 0px 0px, rgba(29, 78, 216, 0.15), transparent 100%)"></div>
     </div>
     <div class="lg:flex lg:justify-between lg:gap-4">
       <!-- Header Section -->
@@ -55,6 +55,7 @@
                     class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">Projects</span>
                 </a>
               </li>
+
             </ul>
           </nav>
         </div>
@@ -177,7 +178,8 @@
                 </div>
                 <header
                   class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
-                  <img src="./src/img/project-preview/rentiz-preview.webp" alt="rentiz landing">
+                  <img class="w-full max-h-max" src="./src/img/project-preview/rentiz-preview.webp"
+                    alt="rentiz landing">
                 </header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-slate-200">
@@ -239,7 +241,8 @@
                 </div>
                 <header
                   class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
-                  <img src="./src/img/project-preview/tealux-preview.webp" alt="tealux landing">
+                  <img class="w-full max-h-max" src="./src/img/project-preview/tealux-preview.webp"
+                    alt="tealux landing">
                 </header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-slate-200">
@@ -299,7 +302,8 @@
                 </div>
                 <header
                   class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
-                  <img src="./src/img/project-preview/portfoliov1-preview.webp" alt="tealux landing">
+                  <img class="w-full max-h-max" src="./src/img/project-preview/portfoliov1-preview.webp"
+                    alt="tealux landing">
                 </header>
                 <div class="z-10 sm:col-span-6">
                   <h3 class="font-medium leading-snug text-slate-200">
@@ -353,7 +357,7 @@
     </div>
   </div>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>

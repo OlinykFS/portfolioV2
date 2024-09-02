@@ -46,7 +46,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Inter var, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter var;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -449,7 +449,7 @@ video {
 @font-face {
   font-family: Inter var;
 
-  font-weight: 100 900;
+  font-weight: 300 700;
 
   font-display: swap;
 
@@ -458,24 +458,8 @@ video {
   src: url("/src/fonts/InterVariable.woff2") format("woff2");
 }
 
-:root {
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-}
-
 html {
-  font-family: Inter var, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-variation-settings: "opsz" 32;
-}
-
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", sans-serif;
-  }
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
 *, ::before, ::after {
@@ -746,6 +730,16 @@ body {
   height: 1px;
 }
 
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.max-h-max {
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -881,7 +875,7 @@ body {
 }
 
 .font-sans {
-  font-family: Inter var, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter var;
 }
 
 .text-4xl {

@@ -4,7 +4,7 @@ document.addEventListener("mousemove", (e) => {
   const x = e.clientX;
   const y = e.clientY;
 
-  gradientElement.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+  gradientElement.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 50%)`;
 });
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(
@@ -38,17 +38,5 @@ function updateActiveNavItem() {
     }
   });
 }
-
-let ticking = false;
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    window.requestAnimationFrame(() => {
-      updateActiveNavItem();
-      ticking = false;
-    });
-    ticking = true;
-  }
-});
-
 window.addEventListener("load", updateActiveNavItem);
 window.addEventListener("resize", updateActiveNavItem);
