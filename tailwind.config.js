@@ -17,7 +17,7 @@ module.exports = {
           fontDisplay: "swap",
           src: 'url("../fonts/InterVariable.woff2") format("woff2")',
         },
-        body: { fontFeatureSettings: '"cv11"' },
+        body: { fontFeatureSettings: '"cv02", "cv03", "cv04", "cv11"' },
       });
     },
   ],
